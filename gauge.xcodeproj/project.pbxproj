@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6015F801C3049A600CE8793 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6015F7F1C3049A600CE8793 /* Settings.swift */; };
+		E6015F821C3060A300CE8793 /* UITextFieldWithoutCaret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6015F811C3060A300CE8793 /* UITextFieldWithoutCaret.swift */; };
+		E67DEDEC1C1DEF560017A885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67DEDEB1C1DEF560017A885 /* AppDelegate.swift */; };
+		E67DEDEE1C1DEF560017A885 /* GaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67DEDED1C1DEF560017A885 /* GaugeViewController.swift */; };
+		E67DEDF11C1DEF560017A885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67DEDEF1C1DEF560017A885 /* Main.storyboard */; };
+		E67DEDF41C1DEF560017A885 /* gauge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E67DEDF21C1DEF560017A885 /* gauge.xcdatamodeld */; };
+		E67DEDF61C1DEF560017A885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67DEDF51C1DEF560017A885 /* Assets.xcassets */; };
+		E67DEDF91C1DEF560017A885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67DEDF71C1DEF560017A885 /* LaunchScreen.storyboard */; };
+		E67DEE041C1DEF560017A885 /* gaugeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67DEE031C1DEF560017A885 /* gaugeTests.swift */; };
+		E6A8E2411C20765E002CC7C7 /* EZAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E2341C20765E002CC7C7 /* EZAudioDevice.m */; };
+		E6A8E2421C20765E002CC7C7 /* EZAudioFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E2361C20765E002CC7C7 /* EZAudioFFT.m */; };
+		E6A8E2431C20765E002CC7C7 /* EZAudioFloatConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E2381C20765E002CC7C7 /* EZAudioFloatConverter.m */; };
+		E6A8E2441C20765E002CC7C7 /* EZAudioUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E23A1C20765E002CC7C7 /* EZAudioUtilities.m */; };
+		E6A8E2451C20765E002CC7C7 /* EZMicrophone.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E23C1C20765E002CC7C7 /* EZMicrophone.m */; };
+		E6A8E2461C20765E002CC7C7 /* EZOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E23E1C20765E002CC7C7 /* EZOutput.m */; };
+		E6A8E2471C20765E002CC7C7 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E23F1C20765E002CC7C7 /* TPCircularBuffer.c */; };
+		E6CBF3831C21FB4A00A79C8C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CBF3821C21FB4A00A79C8C /* SettingsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E67DEE001C1DEF560017A885 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E67DEDE01C1DEF560017A885 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E67DEDE71C1DEF560017A885;
+			remoteInfo = gauge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E6015F7F1C3049A600CE8793 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E6015F811C3060A300CE8793 /* UITextFieldWithoutCaret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldWithoutCaret.swift; sourceTree = "<group>"; };
+		E67DEDE81C1DEF560017A885 /* gauge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gauge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E67DEDEB1C1DEF560017A885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E67DEDED1C1DEF560017A885 /* GaugeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeViewController.swift; sourceTree = "<group>"; };
+		E67DEDF01C1DEF560017A885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E67DEDF31C1DEF560017A885 /* gauge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gauge.xcdatamodel; sourceTree = "<group>"; };
+		E67DEDF51C1DEF560017A885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E67DEDF81C1DEF560017A885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E67DEDFA1C1DEF560017A885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E67DEDFF1C1DEF560017A885 /* gaugeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gaugeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E67DEE031C1DEF560017A885 /* gaugeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gaugeTests.swift; sourceTree = "<group>"; };
+		E67DEE051C1DEF560017A885 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6A8E2311C20765E002CC7C7 /* gauge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gauge-Bridging-Header.h"; sourceTree = "<group>"; };
+		E6A8E2321C20765E002CC7C7 /* EZAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EZAudio.h; path = EZAudio/EZAudio.h; sourceTree = "<group>"; };
+		E6A8E2331C20765E002CC7C7 /* EZAudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EZAudioDevice.h; path = EZAudio/EZAudioDevice.h; sourceTree = "<group>"; };
+		E6A8E2341C20765E002CC7C7 /* EZAudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EZAudioDevice.m; path = EZAudio/EZAudioDevice.m; sourceTree = "<group>"; };
+		E6A8E2351C20765E002CC7C7 /* EZAudioFFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EZAudioFFT.h; path = EZAudio/EZAudioFFT.h; sourceTree = "<group>"; };
+		E6A8E2361C20765E002CC7C7 /* EZAudioFFT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EZAudioFFT.m; path = EZAudio/EZAudioFFT.m; sourceTree = "<group>"; };
+		E6A8E2371C20765E002CC7C7 /* EZAudioFloatConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EZAudioFloatConverter.h; path = EZAudio/EZAudioFloatConverter.h; sourceTree = "<group>"; };
+		E6A8E2381C20765E002CC7C7 /* EZAudioFloatConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EZAudioFloatConverter.m; path = EZAudio/EZAudioFloatConverter.m; sourceTree = "<group>"; };
+		E6A8E2391C20765E002CC7C7 /* EZAudioUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EZAudioUtilities.h; path = EZAudio/EZAudioUtilities.h; sourceTree = "<group>"; };
+		E6A8E23A1C20765E002CC7C7 /* EZAudioUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EZAudioUtilities.m; path = EZAudio/EZAudioUtilities.m; sourceTree = "<group>"; };
+		E6A8E23B1C20765E002CC7C7 /* EZMicrophone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EZMicrophone.h; path = EZAudio/EZMicrophone.h; sourceTree = "<group>"; };
+		E6A8E23C1C20765E002CC7C7 /* EZMicrophone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EZMicrophone.m; path = EZAudio/EZMicrophone.m; sourceTree = "<group>"; };
+		E6A8E23D1C20765E002CC7C7 /* EZOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EZOutput.h; path = EZAudio/EZOutput.h; sourceTree = "<group>"; };
+		E6A8E23E1C20765E002CC7C7 /* EZOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EZOutput.m; path = EZAudio/EZOutput.m; sourceTree = "<group>"; };
+		E6A8E23F1C20765E002CC7C7 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
+		E6A8E2401C20765E002CC7C7 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = EZAudio/TPCircularBuffer.h; sourceTree = "<group>"; };
+		E6CBF3821C21FB4A00A79C8C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E67DEDE51C1DEF560017A885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E67DEDFC1C1DEF560017A885 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E67DEDDF1C1DEF560017A885 = {
+			isa = PBXGroup;
+			children = (
+				E6A8E2301C207639002CC7C7 /* EZAudio */,
+				E67DEDEA1C1DEF560017A885 /* gauge */,
+				E67DEE021C1DEF560017A885 /* gaugeTests */,
+				E67DEDE91C1DEF560017A885 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E67DEDE91C1DEF560017A885 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E67DEDE81C1DEF560017A885 /* gauge.app */,
+				E67DEDFF1C1DEF560017A885 /* gaugeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E67DEDEA1C1DEF560017A885 /* gauge */ = {
+			isa = PBXGroup;
+			children = (
+				E67DEDEB1C1DEF560017A885 /* AppDelegate.swift */,
+				E67DEDED1C1DEF560017A885 /* GaugeViewController.swift */,
+				E6CBF3821C21FB4A00A79C8C /* SettingsTableViewController.swift */,
+				E6015F811C3060A300CE8793 /* UITextFieldWithoutCaret.swift */,
+				E6015F7F1C3049A600CE8793 /* Settings.swift */,
+				E67DEDEF1C1DEF560017A885 /* Main.storyboard */,
+				E67DEDF51C1DEF560017A885 /* Assets.xcassets */,
+				E67DEDF71C1DEF560017A885 /* LaunchScreen.storyboard */,
+				E67DEDFA1C1DEF560017A885 /* Info.plist */,
+				E67DEDF21C1DEF560017A885 /* gauge.xcdatamodeld */,
+			);
+			path = gauge;
+			sourceTree = "<group>";
+		};
+		E67DEE021C1DEF560017A885 /* gaugeTests */ = {
+			isa = PBXGroup;
+			children = (
+				E67DEE031C1DEF560017A885 /* gaugeTests.swift */,
+				E67DEE051C1DEF560017A885 /* Info.plist */,
+			);
+			path = gaugeTests;
+			sourceTree = "<group>";
+		};
+		E6A8E2301C207639002CC7C7 /* EZAudio */ = {
+			isa = PBXGroup;
+			children = (
+				E6A8E2321C20765E002CC7C7 /* EZAudio.h */,
+				E6A8E2331C20765E002CC7C7 /* EZAudioDevice.h */,
+				E6A8E2341C20765E002CC7C7 /* EZAudioDevice.m */,
+				E6A8E2351C20765E002CC7C7 /* EZAudioFFT.h */,
+				E6A8E2361C20765E002CC7C7 /* EZAudioFFT.m */,
+				E6A8E2371C20765E002CC7C7 /* EZAudioFloatConverter.h */,
+				E6A8E2381C20765E002CC7C7 /* EZAudioFloatConverter.m */,
+				E6A8E2391C20765E002CC7C7 /* EZAudioUtilities.h */,
+				E6A8E23A1C20765E002CC7C7 /* EZAudioUtilities.m */,
+				E6A8E23B1C20765E002CC7C7 /* EZMicrophone.h */,
+				E6A8E23C1C20765E002CC7C7 /* EZMicrophone.m */,
+				E6A8E23D1C20765E002CC7C7 /* EZOutput.h */,
+				E6A8E23E1C20765E002CC7C7 /* EZOutput.m */,
+				E6A8E23F1C20765E002CC7C7 /* TPCircularBuffer.c */,
+				E6A8E2401C20765E002CC7C7 /* TPCircularBuffer.h */,
+				E6A8E2311C20765E002CC7C7 /* gauge-Bridging-Header.h */,
+			);
+			name = EZAudio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E67DEDE71C1DEF560017A885 /* gauge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E67DEE081C1DEF560017A885 /* Build configuration list for PBXNativeTarget "gauge" */;
+			buildPhases = (
+				E67DEDE41C1DEF560017A885 /* Sources */,
+				E67DEDE51C1DEF560017A885 /* Frameworks */,
+				E67DEDE61C1DEF560017A885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gauge;
+			productName = gauge;
+			productReference = E67DEDE81C1DEF560017A885 /* gauge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E67DEDFE1C1DEF560017A885 /* gaugeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E67DEE0B1C1DEF560017A885 /* Build configuration list for PBXNativeTarget "gaugeTests" */;
+			buildPhases = (
+				E67DEDFB1C1DEF560017A885 /* Sources */,
+				E67DEDFC1C1DEF560017A885 /* Frameworks */,
+				E67DEDFD1C1DEF560017A885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E67DEE011C1DEF560017A885 /* PBXTargetDependency */,
+			);
+			name = gaugeTests;
+			productName = gaugeTests;
+			productReference = E67DEDFF1C1DEF560017A885 /* gaugeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E67DEDE01C1DEF560017A885 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Sonic Scales";
+				TargetAttributes = {
+					E67DEDE71C1DEF560017A885 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = DRG22YEQ52;
+						LastSwiftMigration = 0810;
+					};
+					E67DEDFE1C1DEF560017A885 = {
+						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
+						TestTargetID = E67DEDE71C1DEF560017A885;
+					};
+				};
+			};
+			buildConfigurationList = E67DEDE31C1DEF560017A885 /* Build configuration list for PBXProject "gauge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E67DEDDF1C1DEF560017A885;
+			productRefGroup = E67DEDE91C1DEF560017A885 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E67DEDE71C1DEF560017A885 /* gauge */,
+				E67DEDFE1C1DEF560017A885 /* gaugeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E67DEDE61C1DEF560017A885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E67DEDF91C1DEF560017A885 /* LaunchScreen.storyboard in Resources */,
+				E67DEDF61C1DEF560017A885 /* Assets.xcassets in Resources */,
+				E67DEDF11C1DEF560017A885 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E67DEDFD1C1DEF560017A885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E67DEDE41C1DEF560017A885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6A8E2421C20765E002CC7C7 /* EZAudioFFT.m in Sources */,
+				E6A8E2461C20765E002CC7C7 /* EZOutput.m in Sources */,
+				E6A8E2431C20765E002CC7C7 /* EZAudioFloatConverter.m in Sources */,
+				E6CBF3831C21FB4A00A79C8C /* SettingsTableViewController.swift in Sources */,
+				E67DEDEE1C1DEF560017A885 /* GaugeViewController.swift in Sources */,
+				E67DEDEC1C1DEF560017A885 /* AppDelegate.swift in Sources */,
+				E6015F801C3049A600CE8793 /* Settings.swift in Sources */,
+				E6A8E2451C20765E002CC7C7 /* EZMicrophone.m in Sources */,
+				E67DEDF41C1DEF560017A885 /* gauge.xcdatamodeld in Sources */,
+				E6A8E2441C20765E002CC7C7 /* EZAudioUtilities.m in Sources */,
+				E6015F821C3060A300CE8793 /* UITextFieldWithoutCaret.swift in Sources */,
+				E6A8E2471C20765E002CC7C7 /* TPCircularBuffer.c in Sources */,
+				E6A8E2411C20765E002CC7C7 /* EZAudioDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E67DEDFB1C1DEF560017A885 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E67DEE041C1DEF560017A885 /* gaugeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E67DEE011C1DEF560017A885 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E67DEDE71C1DEF560017A885 /* gauge */;
+			targetProxy = E67DEE001C1DEF560017A885 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E67DEDEF1C1DEF560017A885 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E67DEDF01C1DEF560017A885 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E67DEDF71C1DEF560017A885 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E67DEDF81C1DEF560017A885 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E67DEE061C1DEF560017A885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E67DEE071C1DEF560017A885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E67DEE091C1DEF560017A885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = DRG22YEQ52;
+				INFOPLIST_FILE = gauge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonicscales.gauge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gauge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E67DEE0A1C1DEF560017A885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = DRG22YEQ52;
+				INFOPLIST_FILE = gauge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonicscales.gauge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gauge-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E67DEE0C1C1DEF560017A885 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = gaugeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonicscales.gaugeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gauge.app/gauge";
+			};
+			name = Debug;
+		};
+		E67DEE0D1C1DEF560017A885 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = gaugeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sonicscales.gaugeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gauge.app/gauge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E67DEDE31C1DEF560017A885 /* Build configuration list for PBXProject "gauge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E67DEE061C1DEF560017A885 /* Debug */,
+				E67DEE071C1DEF560017A885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E67DEE081C1DEF560017A885 /* Build configuration list for PBXNativeTarget "gauge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E67DEE091C1DEF560017A885 /* Debug */,
+				E67DEE0A1C1DEF560017A885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E67DEE0B1C1DEF560017A885 /* Build configuration list for PBXNativeTarget "gaugeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E67DEE0C1C1DEF560017A885 /* Debug */,
+				E67DEE0D1C1DEF560017A885 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E67DEDF21C1DEF560017A885 /* gauge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E67DEDF31C1DEF560017A885 /* gauge.xcdatamodel */,
+			);
+			currentVersion = E67DEDF31C1DEF560017A885 /* gauge.xcdatamodel */;
+			path = gauge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E67DEDE01C1DEF560017A885 /* Project object */;
+}
