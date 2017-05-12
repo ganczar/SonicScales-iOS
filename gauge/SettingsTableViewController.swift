@@ -211,17 +211,33 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 	// MARK: - Table view data source
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
-		return 2;
+		return 3;
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if (section == 0) {
+		switch section {
+		case 0:
 			return 3
-		} else if (section == 1) {
+		case 1:
 			return 2
-		} else {
-			return 0;
+		case 2:
+			return 2
+		default:
+			return 0
 		}
+	}
+
+	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+		let headerLabel: UILabel = UILabel()
+		headerLabel.frame = CGRect(x: 10, y: 1, width: 320, height: 20);
+		headerLabel.font = UIFont.systemFont(ofSize: 12)
+		headerLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
+		headerLabel.textColor = UIColor.darkGray
+		let headerView: UIView = UIView()
+		headerView.backgroundColor = UIColor.groupTableViewBackground
+		headerView.alpha = 0.5
+		headerView.addSubview(headerLabel)
+		return headerView;
 	}
 
     /*
