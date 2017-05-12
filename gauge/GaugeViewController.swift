@@ -95,7 +95,8 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
-		gravitionalAcceleration = 9.80665; //? 9. 78-83
+		// TODO: 9.78-9.83 - estimate based on GPS coordinates or measure using accelerometer
+		gravitionalAcceleration = 9.80665;
 		stringLength = settings.stringLength;
 		forceArmLength = settings.forceArmLength;
 		resistanceArmLength = settings.resistanceArmLength;
