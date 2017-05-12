@@ -25,7 +25,7 @@ Once the speed of propagation is known, the frequency of the sound produced by t
 If you know the length and the diameter of the string, the material from which it is made and the frequency of the sound, you can find the mass of the object being weighed.
 
 ## Intellectual Property
-## Patents
+### Patents
 The presented solutions are covered by, or for use under, one or more pending patent applications in EU and other countries.
 
 ### Other Intellectual Property Rights
