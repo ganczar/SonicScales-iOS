@@ -24,6 +24,7 @@
 		E6A8E2461C20765E002CC7C7 /* EZOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E23E1C20765E002CC7C7 /* EZOutput.m */; };
 		E6A8E2471C20765E002CC7C7 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = E6A8E23F1C20765E002CC7C7 /* TPCircularBuffer.c */; };
 		E6CBF3831C21FB4A00A79C8C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CBF3821C21FB4A00A79C8C /* SettingsTableViewController.swift */; };
+		E6FB08641EC648EE004571B5 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FB08631EC648EE004571B5 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E6A8E23F1C20765E002CC7C7 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = EZAudio/TPCircularBuffer.c; sourceTree = "<group>"; };
 		E6A8E2401C20765E002CC7C7 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = EZAudio/TPCircularBuffer.h; sourceTree = "<group>"; };
 		E6CBF3821C21FB4A00A79C8C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		E6FB08631EC648EE004571B5 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E6015F811C3060A300CE8793 /* UITextFieldWithoutCaret.swift */,
 				E6015F7F1C3049A600CE8793 /* Settings.swift */,
 				E67DEDEF1C1DEF560017A885 /* Main.storyboard */,
+				E6FB08631EC648EE004571B5 /* AboutViewController.swift */,
 				E67DEDF51C1DEF560017A885 /* Assets.xcassets */,
 				E67DEDF71C1DEF560017A885 /* LaunchScreen.storyboard */,
 				E67DEDFA1C1DEF560017A885 /* Info.plist */,
@@ -269,6 +272,7 @@
 				E6A8E2451C20765E002CC7C7 /* EZMicrophone.m in Sources */,
 				E67DEDF41C1DEF560017A885 /* gauge.xcdatamodeld in Sources */,
 				E6A8E2441C20765E002CC7C7 /* EZAudioUtilities.m in Sources */,
+				E6FB08641EC648EE004571B5 /* AboutViewController.swift in Sources */,
 				E6015F821C3060A300CE8793 /* UITextFieldWithoutCaret.swift in Sources */,
 				E6A8E2471C20765E002CC7C7 /* TPCircularBuffer.c in Sources */,
 				E6A8E2411C20765E002CC7C7 /* EZAudioDevice.m in Sources */,
