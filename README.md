@@ -1,18 +1,15 @@
 ## Principle
 
-1. Place the weight on the scale
-
 ![Place the weight on the scale](http://sonicscales.com/img/scales1.svg)
-
-
-2. Strum the string
+1. Place the weight on the scale
 
 ![Strum the string](http://sonicscales.com/img/scales2.svg)
 
-
-3. Get the result
+2. Strum the string
 
 ![Get the result](http://sonicscales.com/img/scales3.svg)
+
+3. Get the result
 
 ## Physics of a string
 ### Wave
