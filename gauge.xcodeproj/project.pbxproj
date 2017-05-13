@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E6015F801C3049A600CE8793 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6015F7F1C3049A600CE8793 /* Settings.swift */; };
 		E6015F821C3060A300CE8793 /* UITextFieldWithoutCaret.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6015F811C3060A300CE8793 /* UITextFieldWithoutCaret.swift */; };
+		E64CEE1F1EC72A3100722D88 /* PrincipleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64CEE1E1EC72A3100722D88 /* PrincipleViewController.swift */; };
+		E64CEE211EC7308A00722D88 /* Step.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64CEE201EC7308A00722D88 /* Step.xib */; };
+		E64CEE231EC730F600722D88 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64CEE221EC730F600722D88 /* StepView.swift */; };
 		E67DEDEC1C1DEF560017A885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67DEDEB1C1DEF560017A885 /* AppDelegate.swift */; };
 		E67DEDEE1C1DEF560017A885 /* GaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67DEDED1C1DEF560017A885 /* GaugeViewController.swift */; };
 		E67DEDF11C1DEF560017A885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67DEDEF1C1DEF560017A885 /* Main.storyboard */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		E6015F7F1C3049A600CE8793 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		E6015F811C3060A300CE8793 /* UITextFieldWithoutCaret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldWithoutCaret.swift; sourceTree = "<group>"; };
+		E64CEE1E1EC72A3100722D88 /* PrincipleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrincipleViewController.swift; sourceTree = "<group>"; };
+		E64CEE201EC7308A00722D88 /* Step.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Step.xib; sourceTree = "<group>"; };
+		E64CEE221EC730F600722D88 /* StepView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		E67DEDE81C1DEF560017A885 /* gauge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gauge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67DEDEB1C1DEF560017A885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E67DEDED1C1DEF560017A885 /* GaugeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeViewController.swift; sourceTree = "<group>"; };
@@ -114,10 +120,13 @@
 				E67DEDEB1C1DEF560017A885 /* AppDelegate.swift */,
 				E67DEDED1C1DEF560017A885 /* GaugeViewController.swift */,
 				E6CBF3821C21FB4A00A79C8C /* SettingsTableViewController.swift */,
+				E64CEE1E1EC72A3100722D88 /* PrincipleViewController.swift */,
+				E64CEE201EC7308A00722D88 /* Step.xib */,
+				E64CEE221EC730F600722D88 /* StepView.swift */,
+				E6FB08631EC648EE004571B5 /* AboutViewController.swift */,
 				E6015F811C3060A300CE8793 /* UITextFieldWithoutCaret.swift */,
 				E6015F7F1C3049A600CE8793 /* Settings.swift */,
 				E67DEDEF1C1DEF560017A885 /* Main.storyboard */,
-				E6FB08631EC648EE004571B5 /* AboutViewController.swift */,
 				E67DEDF51C1DEF560017A885 /* Assets.xcassets */,
 				E67DEDF71C1DEF560017A885 /* LaunchScreen.storyboard */,
 				E67DEDFA1C1DEF560017A885 /* Info.plist */,
@@ -243,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E67DEDF91C1DEF560017A885 /* LaunchScreen.storyboard in Resources */,
+				E64CEE211EC7308A00722D88 /* Step.xib in Resources */,
 				E67DEDF61C1DEF560017A885 /* Assets.xcassets in Resources */,
 				E67DEDF11C1DEF560017A885 /* Main.storyboard in Resources */,
 			);
@@ -262,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E64CEE231EC730F600722D88 /* StepView.swift in Sources */,
 				E6A8E2421C20765E002CC7C7 /* EZAudioFFT.m in Sources */,
 				E6A8E2461C20765E002CC7C7 /* EZOutput.m in Sources */,
 				E6A8E2431C20765E002CC7C7 /* EZAudioFloatConverter.m in Sources */,
@@ -274,6 +285,7 @@
 				E6A8E2441C20765E002CC7C7 /* EZAudioUtilities.m in Sources */,
 				E6FB08641EC648EE004571B5 /* AboutViewController.swift in Sources */,
 				E6015F821C3060A300CE8793 /* UITextFieldWithoutCaret.swift in Sources */,
+				E64CEE1F1EC72A3100722D88 /* PrincipleViewController.swift in Sources */,
 				E6A8E2471C20765E002CC7C7 /* TPCircularBuffer.c in Sources */,
 				E6A8E2411C20765E002CC7C7 /* EZAudioDevice.m in Sources */,
 			);
