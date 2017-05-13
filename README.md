@@ -3,9 +3,11 @@
 ![Place the weight on the scale](http://sonicscales.com/img/scales1.svg)
 1. Place the weight on the scale
 
+
 ![Strum the string](http://sonicscales.com/img/scales2.svg)
 
 2. Strum the string
+
 
 ![Get the result](http://sonicscales.com/img/scales3.svg)
 
