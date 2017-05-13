@@ -28,8 +28,8 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 	let densityArray = [Int](5000...10000);
 	let diameterArray = [Int](8...84);
 	let lengthArray = [Int](100...3000);
-	let forceArmArray = [Int](10...30);
-	let resistanceArmArray = [Int](1...10);
+	let forceArmArray = [Int](1...100);
+	let resistanceArmArray = [Int](1...100);
 
 	override func viewDidLoad() {
 		super.viewDidLoad();
@@ -178,7 +178,6 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 	{
 		if (pickerView == densityPicker) {
 			densityTextField.text = String(pickerView.selectedRow(inComponent: 0) + densityArray[0]);
-			settings.density = Double(pickerView.selectedRow(inComponent: 0) + densityArray[0]);
 		} else if (pickerView == diameterPicker) {
 			diameterTextField.text = String(pickerView.selectedRow(inComponent: 0) + diameterArray[0]);
 		} else if (pickerView == lengthPicker) {
