@@ -9,12 +9,14 @@
 import UIKit
 
 class AboutViewController: UIViewController {
+	@IBOutlet weak var aboutTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
 		self.automaticallyAdjustsScrollViewInsets = false;
+		aboutTextView.scrollRangeToVisible(NSRange(location:0, length:0));
     }
 
     override func didReceiveMemoryWarning() {
