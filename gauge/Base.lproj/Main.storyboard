@@ -82,7 +82,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="m0q-Yd-wqG"/>
                                 </constraints>
-                                <state key="normal" title="Learn more"/>
+                                <state key="normal" title="Learn more &gt;"/>
                                 <connections>
                                     <segue destination="Iao-V6-Exe" kind="show" id="0cN-Da-y7r"/>
                                 </connections>
@@ -110,12 +110,12 @@
                             <mask key="constraints">
                                 <exclude reference="6Y1-41-ZEf"/>
                                 <exclude reference="ycK-Xy-dpC"/>
+                                <exclude reference="EtI-Wo-pM8"/>
+                                <exclude reference="zhz-UL-0lx"/>
                                 <exclude reference="lja-hy-9Du"/>
                                 <exclude reference="xVI-5M-tia"/>
                                 <exclude reference="V5D-pA-K1w"/>
                                 <exclude reference="ZAY-Hd-6pL"/>
-                                <exclude reference="EtI-Wo-pM8"/>
-                                <exclude reference="zhz-UL-0lx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -126,12 +126,12 @@
                             <mask key="constraints">
                                 <include reference="6Y1-41-ZEf"/>
                                 <include reference="ycK-Xy-dpC"/>
+                                <include reference="EtI-Wo-pM8"/>
+                                <include reference="zhz-UL-0lx"/>
                                 <include reference="lja-hy-9Du"/>
                                 <include reference="xVI-5M-tia"/>
                                 <include reference="V5D-pA-K1w"/>
                                 <include reference="ZAY-Hd-6pL"/>
-                                <include reference="EtI-Wo-pM8"/>
-                                <include reference="zhz-UL-0lx"/>
                             </mask>
                         </variation>
                     </view>
