@@ -72,11 +72,12 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 		unitControl.selectedSegmentIndex = 0;
 		updateUnits();
 		
-		zeroButton.setTitleColor(UIColor.darkText, for: UIControlState());
 		zeroButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled);
+		zeroButton.backgroundColor = .clear
 		zeroButton.layer.borderWidth = 1.0;
 		zeroButton.layer.masksToBounds = true;
 		zeroButton.layer.cornerRadius = 5.0;
+		zeroButton.layer.borderColor = self.view.tintColor.cgColor;
 		
 		let audioSession: AVAudioSession = AVAudioSession.sharedInstance();
 		do {
@@ -162,7 +163,7 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 				frequencyString = String(format: "%.1f", maxFrequency);
 				magnitudeString = String(format: "%.0f", magnitude);
 				buttonEnabled = true;
-				buttonColor = UIColor.darkText.cgColor;
+				buttonColor = self.view.tintColor.cgColor;
 			}
 			self.weightLabel.text = weightString;
 			self.maxFrequencyLabel.text = "\(frequencyString) Hz";
