@@ -41,7 +41,7 @@ The presented solutions may be covered by design patent or registered industrial
 SonicScales-iOS is available under the MIT license. See the LICENSE file for more info.
 
 ## Download on the App Store
-![https://itunes.apple.com/us/app/sonic-scales/id1237343447?ls=1&mt=8](http://sonicscales.com/img/Download_on_the_App_Store_Badge_US-UK_135x40.svg)
+<a href="https://itunes.apple.com/us/app/sonic-scales/id1237343447?ls=1&amp;mt=8" target="_blank"><img alt="Download on the App Store" src="http://sonicscales.com/img/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
 
 ## Contact
 [sonicscales.com](http://sonicscales.com "Sonic Scales")
