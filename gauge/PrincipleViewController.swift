@@ -16,6 +16,7 @@ class PrincipleViewController: UIViewController, UIScrollViewDelegate {
 	let step1 = ["description": "1. Place the weight on the scale", "image": "Step1"];
 	let step2 = ["description": "2. Strum the string", "image": "Step2"];
 	let step3 = ["description": "3. Get the result", "image": "Step3"];
+	let buy = ["description": "Buy a scale at http://shop.sonicscales.com", "image": "Cart"];
 
 	var stepsArray = [Dictionary<String, String>]();
 
@@ -25,7 +26,7 @@ class PrincipleViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
 		self.automaticallyAdjustsScrollViewInsets = false;
 
-		stepsArray = [step1, step2, step3];
+		stepsArray = [step1, step2, step3, buy];
 		stepsScrollView.delegate = self;
 		stepsScrollView.isPagingEnabled = true;
 		stepsScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(stepsArray.count), height: 350)
@@ -46,7 +47,7 @@ class PrincipleViewController: UIViewController, UIScrollViewDelegate {
 	func loadSteps() {
 		for (index, step) in stepsArray.enumerated() {
 			if let stepView = Bundle.main.loadNibNamed("Step", owner: nil, options: nil)?.first as? StepView {
-				stepView.stepDescriptionLabel.text = step["description"];
+				stepView.stepDescriptionTextView.text = step["description"];
 				stepView.stepImageView.image = UIImage(named: step["image"]!);
 
 				stepsScrollView.addSubview(stepView);

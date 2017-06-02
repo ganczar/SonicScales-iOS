@@ -11,9 +11,9 @@ import UIKit
 class StepView: UIView {
 
 	@IBOutlet weak var stepImageView: UIImageView!
-	@IBOutlet weak var stepDescriptionLabel: UILabel!
+	@IBOutlet weak var stepDescriptionTextView: UITextView!
 
-    /*
+	/*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
