@@ -100,7 +100,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		super.didReceiveMemoryWarning();
 	}
 	
-	func handleTap() {
+	@objc func handleTap() {
 		self.view.endEditing(true);
 	}
 
