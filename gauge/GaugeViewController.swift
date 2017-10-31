@@ -111,7 +111,7 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 	}
 
 	fileprivate func calculateWeight(_ frequency: Double) -> Double {
-		return unitRatio * (resistanceArmLength / forceArmLength) * 4 * linearDensity * pow(stringLength / 1000, 2) * pow(frequency, 2) / gravitionalAcceleration;
+		return (resistanceArmLength / forceArmLength) * 4 * linearDensity * pow(stringLength / 1000, 2) * pow(frequency, 2) / gravitionalAcceleration;
 	}
 
 	fileprivate func updateUnits() {
@@ -158,7 +158,7 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 
 		DispatchQueue.main.async(execute: { () -> Void in
 			if (magnitude > -90) {
-				self.currentValue = self.calculateWeight(maxFrequency);
+				self.currentValue = self.unitRatio * self.calculateWeight(maxFrequency);
 				weightString = String(format: self.decimalFormat, self.currentValue - self.zeroAdjustment);
 				frequencyString = String(format: "%.1f", maxFrequency);
 				magnitudeString = String(format: "%.0f", magnitude);
