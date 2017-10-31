@@ -28,8 +28,8 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 	let densityArray = [Int](5000...10000);
 	let diameterArray = [Int](8...84);
 	let lengthArray = [Int](100...3000);
-	let forceArmArray = [Int](1...100);
-	let resistanceArmArray = [Int](1...100);
+	let forceArmArray = [Int](1...300);
+	let resistanceArmArray = [Int](1...200);
 
 	override func viewDidLoad() {
 		super.viewDidLoad();
