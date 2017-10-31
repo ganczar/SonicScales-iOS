@@ -37,7 +37,7 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 	
 	override func viewDidLoad() {
 		super.viewDidLoad();
-
+		
 		let context: NSManagedObjectContext! = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext;
 		
 		let fetchRequest = NSFetchRequest<NSFetchRequestResult>();
@@ -103,17 +103,17 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 		resistanceArmLength = settings.resistanceArmLength;
 		linearDensity = settings.density * Double.pi * pow((25.4 * settings.stringDiameter / 1000 / 1000) / 2, 2);
 	}
-
+	
 	fileprivate var decimalFormat: String {
 		get {
 			return "%.\(fractionalDigits.description)f";
 		}
 	}
-
+	
 	fileprivate func calculateWeight(_ frequency: Double) -> Double {
 		return (resistanceArmLength / forceArmLength) * 4 * linearDensity * pow(stringLength / 1000, 2) * pow(frequency, 2) / gravitionalAcceleration;
 	}
-
+	
 	fileprivate func updateUnits() {
 		switch unitControl.selectedSegmentIndex {
 		case 0: // [g]
@@ -136,9 +136,9 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 			break;
 		}
 	}
-
+	
 	// MARK: EZMicrophoneDelegate
-
+	
 	func microphone(_ microphone: EZMicrophone!, hasAudioReceived buffer: UnsafeMutablePointer<UnsafeMutablePointer<Float>?>!, withBufferSize bufferSize: UInt32, withNumberOfChannels numberOfChannels: UInt32) {
 		fft.computeFFT(withBuffer: buffer[0], withBufferSize: bufferSize);
 	}
@@ -152,10 +152,10 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 		var magnitudeString: String = "-∞";
 		var buttonColor: CGColor = UIColor.lightGray.cgColor;
 		var buttonEnabled: Bool = false;
-
+		
 		let maxFrequency: Double = Double(fft.maxFrequency);
 		let magnitude: Float = (20 * log10f(fft.maxFrequencyMagnitude));
-
+		
 		DispatchQueue.main.async(execute: { () -> Void in
 			if (magnitude > -90) {
 				self.currentValue = self.unitRatio * self.calculateWeight(maxFrequency);
@@ -176,7 +176,7 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 	@IBAction func zero(_ sender: UIButton) {
 		zeroAdjustment = currentValue;
 	}
-
+	
 	@IBAction func unitChanged(_ sender: UISegmentedControl) {
 		updateUnits();
 	}

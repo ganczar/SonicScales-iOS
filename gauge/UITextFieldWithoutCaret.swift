@@ -9,11 +9,11 @@
 import UIKit
 
 class UITextFieldWithoutCaret: UITextField {
-
+	
 	override func caretRect(for position: UITextPosition) -> CGRect {
 		return CGRect.zero
 	}
-
+	
 	override func selectionRects(for range: UITextRange) -> [Any] {
 		return [AnyObject]()
 	}

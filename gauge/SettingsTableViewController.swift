@@ -10,34 +10,34 @@ import UIKit
 import CoreData
 
 class SettingsTableViewController: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
-
+	
 	@IBOutlet weak var densityTextField: UITextFieldWithoutCaret!;
 	@IBOutlet weak var diameterTextField: UITextFieldWithoutCaret!;
 	@IBOutlet weak var lengthTextField: UITextFieldWithoutCaret!;
 	@IBOutlet weak var forceArmTextField: UITextFieldWithoutCaret!;
 	@IBOutlet weak var resistanceArmTextField: UITextFieldWithoutCaret!;
-
+	
 	var densityPicker: UIPickerView!;
 	var diameterPicker: UIPickerView!;
 	var lengthPicker: UIPickerView!;
 	var forceArmPicker: UIPickerView!;
 	var resistanceArmPicker: UIPickerView!;
-
+	
 	var settings: Settings!;
-
+	
 	let densityArray = [Int](5000...10000);
 	let diameterArray = [Int](8...84);
 	let lengthArray = [Int](100...3000);
 	let forceArmArray = [Int](1...300);
 	let resistanceArmArray = [Int](1...200);
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad();
-
+		
 		let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SettingsTableViewController.handleTap));
 		tapGestureRecognizer.cancelsTouchesInView = false;
 		self.view.addGestureRecognizer(tapGestureRecognizer);
-
+		
 		let context: NSManagedObjectContext! = (UIApplication.shared.delegate as! AppDelegate).managedObjectContext;
 		let fetchRequest = NSFetchRequest<NSFetchRequestResult>();
 		let entityDescription = NSEntityDescription.entity(forEntityName: "Settings", in: context);
@@ -48,7 +48,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 			let fetchError = error as NSError;
 			print(fetchError);
 		}
-
+		
 		densityPicker = createPicker();
 		densityPicker.selectRow(densityArray.index(of: Int(settings.density))!, inComponent: 0, animated: false);
 		
@@ -57,7 +57,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		densityTextField.delegate = self;
 		densityTextField.selectedTextRange = nil;
 		densityTextField.text = String(Int(settings.density));
-
+		
 		diameterPicker = createPicker();
 		diameterPicker.selectRow(diameterArray.index(of: Int(settings.stringDiameter))!, inComponent: 0, animated: false);
 		
@@ -66,7 +66,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		diameterTextField.delegate = self;
 		diameterTextField.selectedTextRange = nil;
 		diameterTextField.text = String(Int(settings.stringDiameter));
-
+		
 		lengthPicker = createPicker();
 		lengthPicker.selectRow(lengthArray.index(of: Int(settings.stringLength))!, inComponent: 0, animated: false);
 		
@@ -75,7 +75,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		lengthTextField.delegate = self;
 		lengthTextField.selectedTextRange = nil;
 		lengthTextField.text = String(Int(settings.stringLength));
-
+		
 		forceArmPicker = createPicker();
 		forceArmPicker.selectRow(forceArmArray.index(of: Int(settings.forceArmLength))!, inComponent: 0, animated: false);
 		
@@ -84,7 +84,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		forceArmTextField.delegate = self;
 		forceArmTextField.selectedTextRange = nil;
 		forceArmTextField.text = String(Int(settings.forceArmLength));
-
+		
 		resistanceArmPicker = createPicker();
 		resistanceArmPicker.selectRow(resistanceArmArray.index(of: Int(settings.resistanceArmLength))!, inComponent: 0, animated: false);
 		
@@ -93,7 +93,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		resistanceArmTextField.delegate = self;
 		resistanceArmTextField.selectedTextRange = nil;
 		resistanceArmTextField.text = String(Int(settings.resistanceArmLength));
-
+		
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -103,7 +103,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 	@objc func handleTap() {
 		self.view.endEditing(true);
 	}
-
+	
 	fileprivate func createPicker() -> UIPickerView {
 		let picker = UIPickerView();
 		picker.backgroundColor = .white;
@@ -126,7 +126,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		toolBar.isUserInteractionEnabled = true;
 		return toolBar;
 	}
-
+	
 	// MARK: - Picker view data source
 	
 	func numberOfComponents(in pickerView: UIPickerView) -> Int
@@ -158,7 +158,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 			label?.font = UIFont.systemFont(ofSize: 25);
 			label?.textAlignment = NSTextAlignment.center;
 		}
-
+		
 		if (pickerView == densityPicker) {
 			label?.text = String(densityArray[row]);
 		} else if (pickerView == diameterPicker) {
@@ -200,13 +200,13 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		textField.resignFirstResponder();
 		return true;
 	}
-
+	
 	// MARK: - Table view delegate
-
+	
 	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
 		return false;
 	}
-
+	
 	// MARK: - Table view data source
 	
 	override func numberOfSections(in tableView: UITableView) -> Int {
@@ -225,7 +225,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 			return 0
 		}
 	}
-
+	
 	override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		let headerLabel: UILabel = UILabel()
 		headerLabel.frame = CGRect(x: 10, y: 1, width: 320, height: 20);
@@ -297,17 +297,17 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 	@IBAction func cancel(_ sender: UIBarButtonItem) {
 		self.dismiss(animated: true, completion: nil);
 	}
-
+	
 	@IBAction func done(_ sender: UIBarButtonItem) {
-
+		
 		settings.density = Double(densityPicker.selectedRow(inComponent: 0) + densityArray[0]) as Double;
 		settings.stringDiameter = Double(diameterPicker.selectedRow(inComponent: 0) + diameterArray[0]) as Double;
 		settings.stringLength = Double(lengthPicker.selectedRow(inComponent: 0) + lengthArray[0]) as Double;
 		settings.forceArmLength = Double(forceArmPicker.selectedRow(inComponent: 0) + forceArmArray[0]) as Double;
 		settings.resistanceArmLength = Double(resistanceArmPicker.selectedRow(inComponent: 0) + resistanceArmArray[0]) as Double;
-
+		
 		(UIApplication.shared.delegate as! AppDelegate).saveContext();
-
+		
 		self.dismiss(animated: true, completion: nil);
 	}
 }

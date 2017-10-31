@@ -10,18 +10,18 @@ import UIKit
 
 class AboutViewController: UIViewController {
 	@IBOutlet weak var aboutTextView: UITextView!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		// Do any additional setup after loading the view.
 		self.automaticallyAdjustsScrollViewInsets = false;
 		aboutTextView.scrollRangeToVisible(NSRange(location:0, length:0));
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+	
 }
