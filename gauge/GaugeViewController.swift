@@ -156,10 +156,10 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 		let maxFrequency: Double = Double(fft.maxFrequency);
 		let magnitude: Float = (20 * log10f(fft.maxFrequencyMagnitude));
 		
-		DispatchQueue.main.async(execute: { () -> Void in
-			if (magnitude > -90) {
+		DispatchQueue.main.async {
+			if (magnitude > -70) {
 				self.currentValue = self.unitRatio * self.calculateWeight(maxFrequency);
-				weightString = String(format: self.decimalFormat, self.currentValue - self.zeroAdjustment);
+				weightString = String(format: self.decimalFormat, self.currentValue - self.unitRatio * self.zeroAdjustment);
 				frequencyString = String(format: "%.1f", maxFrequency);
 				magnitudeString = String(format: "%.0f", magnitude);
 				buttonEnabled = true;
@@ -170,11 +170,11 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 			self.magnitudeLabel.text = "\(magnitudeString) dB";
 			self.zeroButton.isEnabled = buttonEnabled;
 			self.zeroButton.layer.borderColor = buttonColor;
-		});
+		}
 	}
 	
 	@IBAction func zero(_ sender: UIButton) {
-		zeroAdjustment = currentValue;
+		zeroAdjustment = currentValue / unitRatio;
 	}
 	
 	@IBAction func unitChanged(_ sender: UISegmentedControl) {
