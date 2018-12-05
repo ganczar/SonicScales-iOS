@@ -43,7 +43,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		let entityDescription = NSEntityDescription.entity(forEntityName: "Settings", in: context);
 		fetchRequest.entity = entityDescription;
 		do {
-			settings = try context.fetch(fetchRequest)[0] as! Settings;
+			settings = try context.fetch(fetchRequest)[0] as? Settings;
 		} catch {
 			let fetchError = error as NSError;
 			print(fetchError);
