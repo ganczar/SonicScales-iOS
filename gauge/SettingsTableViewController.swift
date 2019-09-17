@@ -50,7 +50,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		}
 		
 		densityPicker = createPicker();
-		densityPicker.selectRow(densityArray.index(of: Int(settings.density))!, inComponent: 0, animated: false);
+		densityPicker.selectRow(densityArray.firstIndex(of: Int(settings.density))!, inComponent: 0, animated: false);
 		
 		densityTextField.inputView = densityPicker;
 		densityTextField.inputAccessoryView = createPickerToolbar("String's density [kg/m³]");
@@ -59,7 +59,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		densityTextField.text = String(Int(settings.density));
 		
 		diameterPicker = createPicker();
-		diameterPicker.selectRow(diameterArray.index(of: Int(settings.stringDiameter))!, inComponent: 0, animated: false);
+		diameterPicker.selectRow(diameterArray.firstIndex(of: Int(settings.stringDiameter))!, inComponent: 0, animated: false);
 		
 		diameterTextField.inputView = diameterPicker;
 		diameterTextField.inputAccessoryView = createPickerToolbar("String's diameter [1/1000 inch]");
@@ -68,7 +68,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		diameterTextField.text = String(Int(settings.stringDiameter));
 		
 		lengthPicker = createPicker();
-		lengthPicker.selectRow(lengthArray.index(of: Int(settings.stringLength))!, inComponent: 0, animated: false);
+		lengthPicker.selectRow(lengthArray.firstIndex(of: Int(settings.stringLength))!, inComponent: 0, animated: false);
 		
 		lengthTextField.inputView = lengthPicker;
 		lengthTextField.inputAccessoryView = createPickerToolbar("String's length [mm]");
@@ -77,7 +77,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		lengthTextField.text = String(Int(settings.stringLength));
 		
 		forceArmPicker = createPicker();
-		forceArmPicker.selectRow(forceArmArray.index(of: Int(settings.forceArmLength))!, inComponent: 0, animated: false);
+		forceArmPicker.selectRow(forceArmArray.firstIndex(of: Int(settings.forceArmLength))!, inComponent: 0, animated: false);
 		
 		forceArmTextField.inputView = forceArmPicker;
 		forceArmTextField.inputAccessoryView = createPickerToolbar("Force arm's length [length unit]");
@@ -86,7 +86,7 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		forceArmTextField.text = String(Int(settings.forceArmLength));
 		
 		resistanceArmPicker = createPicker();
-		resistanceArmPicker.selectRow(resistanceArmArray.index(of: Int(settings.resistanceArmLength))!, inComponent: 0, animated: false);
+		resistanceArmPicker.selectRow(resistanceArmArray.firstIndex(of: Int(settings.resistanceArmLength))!, inComponent: 0, animated: false);
 		
 		resistanceArmTextField.inputView = resistanceArmPicker;
 		resistanceArmTextField.inputAccessoryView = createPickerToolbar("Resistance arm's length [length unit]");
@@ -118,10 +118,10 @@ class SettingsTableViewController: UITableViewController, UIPickerViewDataSource
 		toolBar.isTranslucent = true;
 		toolBar.tintColor = .darkGray;
 		toolBar.sizeToFit();
-		let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(SettingsTableViewController.handleTap));
-		let titleButton = UIBarButtonItem(title: title, style: UIBarButtonItemStyle.plain, target: self, action: nil);
+		let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(SettingsTableViewController.handleTap));
+		let titleButton = UIBarButtonItem(title: title, style: UIBarButtonItem.Style.plain, target: self, action: nil);
 		titleButton.isEnabled = false;
-		let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil);
+		let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil);
 		toolBar.setItems([titleButton, spaceButton, doneButton], animated: false);
 		toolBar.isUserInteractionEnabled = true;
 		return toolBar;

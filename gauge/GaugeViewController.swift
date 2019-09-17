@@ -72,7 +72,7 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 		unitControl.selectedSegmentIndex = 0;
 		updateUnits();
 		
-		zeroButton.setTitleColor(UIColor.lightGray, for: UIControlState.disabled);
+		zeroButton.setTitleColor(UIColor.lightGray, for: UIControl.State.disabled);
 		zeroButton.backgroundColor = .clear
 		zeroButton.layer.borderWidth = 1.0;
 		zeroButton.layer.masksToBounds = true;
@@ -81,7 +81,7 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 		
 		let audioSession: AVAudioSession = AVAudioSession.sharedInstance();
 		do {
-			try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord);
+			try audioSession.setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.playAndRecord)));
 			try audioSession.setActive(true);
 		} catch _ {
 		}
@@ -182,3 +182,6 @@ class GaugeViewController: UIViewController, EZMicrophoneDelegate, EZAudioFFTDel
 	}
 }
 
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}

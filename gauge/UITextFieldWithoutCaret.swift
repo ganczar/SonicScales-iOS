@@ -14,7 +14,7 @@ class UITextFieldWithoutCaret: UITextField {
 		return CGRect.zero
 	}
 	
-	override func selectionRects(for range: UITextRange) -> [Any] {
-		return [AnyObject]()
+	override func selectionRects(for range: UITextRange) -> [UITextSelectionRect] {
+		return [AnyObject]() as! [UITextSelectionRect]
 	}
 }
