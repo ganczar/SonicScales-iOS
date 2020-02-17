@@ -29,19 +29,3 @@ Once the speed of propagation is known, the frequency of the sound produced by t
 
 ### Mass
 If you know the length and the diameter of the string, the material from which it is made and the frequency of the sound, you can find the mass of the object being weighed.
-
-## Intellectual Property
-### Patents
-The presented solutions are covered by, or for use under, one or more pending patent applications in EU and other countries.
-
-### Other Intellectual Property Rights
-The presented solutions may be covered by design patent or registered industrial design, or other registered intellectual property rights.
-
-### License
-SonicScales-iOS is available under the MIT license. See the LICENSE file for more info.
-
-## Download on the App Store
-<a href="https://itunes.apple.com/us/app/sonic-scales/id1237343447?ls=1&amp;mt=8" target="_blank"><img alt="Download on the App Store" src="http://sonicscales.com/img/Download_on_the_App_Store_Badge_US-UK_135x40.svg"></a>
-
-## Contact
-[sonicscales.com](http://sonicscales.com "Sonic Scales")
